@@ -164,3 +164,58 @@ for(let i=1 ; i<=20; i++){
     console.log(i)
 
 }
+
+// While Loop
+
+//  A while loop run as long as a given condition is true .It's the best when we don't know in 
+//  advance how many iteration are needed
+
+let counting =1;
+
+while (counting <=5) {
+    console.log(counting)
+    counting ++
+}
+
+
+// 5. Reverse Digits of a Number (Using while loop)
+
+function reverseDigit() {
+
+    let digits = "6789"
+
+    const split = digits.split('')
+
+
+    let reverseDigit = "";
+
+
+    let i = split.length - 1;
+
+ 
+    while(i >= 0){
+        
+        reverseDigit += split[i]
+        i--;
+
+    }
+
+    console.log(reverseDigit)
+
+
+}
+
+
+reverseDigit()
+
+// Do-While
+// A Do-While loop ensure that the code execute at least once before checking the condition
+
+// let numb =1
+
+// do {
+//     console.log(numb)
+//     numb++;
+    
+// } while (numb <=5);
+    
