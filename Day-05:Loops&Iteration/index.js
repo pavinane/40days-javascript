@@ -128,3 +128,39 @@ function pyramidPattern(totalRows){
 }
 
 pyramidPattern(5)
+
+// 2. Craete Multiplication Table (Using for loop)
+
+function Multiplication (table){
+    for(let i =1 ; i<=10 ;i++){
+        console.log(`${table} ${"*"} ${i} = ${table * i}`)
+    }
+}
+
+Multiplication(3)
+
+// 3. Find the summation of all odd numbers between 1 to 500 
+// and print them on the console log.
+
+  let summation = 0
+for (let i=1 ; i<=500; i++){
+  
+    if (i%2 !==0){
+        summation += i
+    }
+   
+}
+
+ console.log(summation)
+
+
+//  4. Skipping Multiples of 3
+
+for(let i=1 ; i<=20; i++){
+
+    if( i %3 ==0){
+        continue
+    }
+    console.log(i)
+
+}
