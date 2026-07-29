@@ -2,7 +2,7 @@
 
 // Define or Declare the function
 
-function printThis(){
+function printThis() {
     console.log("Declare the function")
 }
 
@@ -15,7 +15,7 @@ printThis()
 // A function expression is a function that is assigned to a variable.
 //  It can be anonymous or named. Unlike a function declaration, a function expression is not available before its initialization.
 
-let printMe = function(){
+let printMe = function () {
     console.log("Function expression")
 }
 
@@ -29,27 +29,27 @@ printMe()
 
 // An argument is the actual value that you pass to the function when calling it.
 
-function sum(a,b){   // a,b is parameter
-    const result = a+b
+function sum(a, b) {   // a,b is parameter
+    const result = a + b
     console.log(result)
 }
 
-sum(10,5)  // value is arguments
+sum(10, 5)  // value is arguments
 
 
 // Return Statement
 
-function multi(a,b){
-    const result = a*b
+function multi(a, b) {
+    const result = a * b
     return result
 
 }
 
-const answer = multi(10,5);
+const answer = multi(10, 5);
 console.log(answer)
 
-function double(x){
-    return 2*x
+function double(x) {
+    return 2 * x
 }
 
 console.log(double(answer));
@@ -58,9 +58,9 @@ console.log(double(answer));
 
 // "A default parameter allows us to assign a default value to a function parameter when the caller doesn't provide a value or passes undefined."
 
-function cal(a,b =0){
+function cal(a, b = 0) {
 
-    return (2* (a+b))
+    return (2 * (a + b))
 }
 const resVar = cal(2);  // when cal(2) 2+ undefined = NAN
 console.log(resVar)
@@ -69,27 +69,27 @@ console.log(resVar)
 // A rest parameter allows a function to accept an indefinite number of arguments and collects the remaining arguments into an array.
 
 // Rest parameter always wil be in last parameter 
-function calculation(x,y,...rest){
-    console.log(x,y,rest)
+function calculation(x, y, ...rest) {
+    console.log(x, y, rest)
 }
-calculation(1,2,3,4,5,6,7,8,9)
+calculation(1, 2, 3, 4, 5, 6, 7, 8, 9)
 
 
 // Nested Function
 
 // A nested function is a function defined inside another function. The inner function has access to variables from its outer function because of lexical scoping. When the inner function retains access to those variables even after the outer function has finished executing, this is called a closure.
 
-function parent(a){  // function scope
-    function child(b){
-         // a is closure
-        const ans = a+b;
+function parent(a) {  // function scope
+    function child(b) {
+        // a is closure
+        const ans = a + b;
         return ans
 
     }
-   return child(3)
+    return child(3)
 }
 // const nestRest = parent(2)
-console.log( parent(2))
+console.log(parent(2))
 
 
 // Callback function
@@ -97,17 +97,17 @@ console.log( parent(2))
 // A callback function is a function passed as an argument to another function, which can then be invoked by the receiving function.
 
 
-function outer (func) {
+function outer(func) {
     console.log("outer")
 
     func()
-    
+
 }
 
 
-outer(function(){
-   const add = 5+5
-   console.log("inner",add) 
+outer(function () {
+    const add = 5 + 5
+    console.log("inner", add)
 }) // is the callback function being passed as an argument.
 
 
@@ -121,11 +121,11 @@ outer(function(){
 // A pure function is a function that always produces the same output for the same input and does not cause side effects or modify external state.
 
 
-function pure (name){
+function pure(name) {
     return "Hello" + name
 }
 
-console.log("pure",pure("pavi")) 
+console.log("pure", pure("pavi"))
 
 // impure Function
 
@@ -133,17 +133,17 @@ console.log("pure",pure("pavi"))
 
 let newName = "Welcome"
 
-function imPure (name){
+function imPure(name) {
     return newName + name
 }
 
-console.log("impure",imPure("pavi"))
-console.log("impure",imPure("pavi"))
+console.log("impure", imPure("pavi"))
+console.log("impure", imPure("pavi"))
 
 
 newName = "Good Boy"
-console.log("impure",imPure("pavi"))
-console.log("impure",imPure("pavi"))
+console.log("impure", imPure("pavi"))
+console.log("impure", imPure("pavi"))
 
 
 // Higher Order Function
@@ -152,17 +152,17 @@ console.log("impure",imPure("pavi"))
 
 // HOF because it accepts a function
 
-function getCamera (camera) {
+function getCamera(camera) {
     camera()
 }
 
-getCamera(function(){
+getCamera(function () {
     console.log("kotak")
 })
 
 // HOF because it returns a function
-function returnFunc(){
-    return function(){
+function returnFunc() {
+    return function () {
         console.log("Hello")
     }
 }
@@ -176,6 +176,75 @@ retFun()
 // An arrow function is a shorter syntax for writing a function expression, introduced in ES6.
 
 let newArr = (name) => {
-   return  console.log(`This is ${name}`)
+    return console.log(`This is ${name}`)
 }
 newArr("Arrow function")
+
+// IIFE (Immediately Invoked Function Expression)
+// An IIFE is a function expression that is immediately executed after it is created. It is commonly used to create a private scope and avoid polluting the global scope.
+
+// (function () {
+//     console.log(`Hello `);
+// })();
+
+// (function (name) {
+//     console.log(`Hello ${name}`);
+// })("Pavi");
+
+
+// Call Stack
+
+// The Call Stack is a data structure used by JavaScript to keep track of function calls during program execution.
+
+function first() {
+    console.log("First");
+}
+
+function second() {
+    console.log("Second");
+}
+
+first();
+second();
+
+
+// Nested Function
+function one() {
+    console.log("One");
+
+}
+
+function two() {
+    console.log("Two");
+    one()
+}
+
+function three() {
+    console.log("Three");
+    two();
+}
+
+three();
+
+
+// Recursion
+
+// Recursion is when a function calls itself until a condition tells it to stop.
+
+// "Recursion is a technique where a function calls itself to solve a problem. A recursive function must have a base condition to stop the recursion. Otherwise, it can continue indefinitely and eventually cause a stack overflow."
+
+function foo(){
+    foo()
+}
+
+function fetchWater(count) {
+    console.log("fetching water", count);
+    if(count ===0){
+        console.log("No more count");
+        return ;
+        
+    }
+    fetchWater(count - 1)
+}
+
+fetchWater(5) // is the recursive call.
