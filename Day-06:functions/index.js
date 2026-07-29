@@ -248,3 +248,119 @@ function fetchWater(count) {
 }
 
 fetchWater(5) // is the recursive call.
+
+// 1. Write a Function to Convert Celsius to Fahrenheit
+
+function celsiusToFahrenheit(celsius) {
+    const changeTemp = (celsius * 9/5) + 32
+    console.log(changeTemp)
+}
+
+celsiusToFahrenheit(40)
+
+//  2. Create a Function to Find the Maximum of Two Numbers
+
+function MaxNum(num1,num2){
+    let findMax = 0
+
+    if(num1>num2){
+        return findMax = num1
+    }else{
+        findMax = num2
+    }
+
+    console.log(findMax)
+}
+
+MaxNum(57,60)
+
+// 3. Function to Check if a String is a Palindrome
+
+function isPalindrome(str) {
+    const reverse = str.split("").reverse().join("")
+    // console.log(reverse)
+  
+    if(str === reverse){
+        return console.log(" isPalindrome is true")
+    }else{
+       return console.log(" isPalindrome is false")
+    }
+}
+
+isPalindrome("madam")
+
+// 4. Write a Function to Find Factorial of a Number
+
+function factorial(n) {
+
+    if (n == 1) {
+        console.log("No more count");
+        return 1;
+    }
+
+    return n * factorial(n-1)
+}
+
+let result = factorial(4);
+
+console.log(result);
+
+//  5. Write a function to Count Vowels in a String
+
+
+function findVowels (str) {
+    let vowels = ["a", "e", "i", "o", "u"];
+    let count = 0;
+    let store = []
+
+    for(let i =0; i<str.length;i++){
+        if(vowels.includes(str[i])){
+            count ++;
+            store.push(str[i])
+
+        }
+
+    }
+
+    console.log(count)
+     console.log(store)
+}
+
+findVowels("keerthivasan");
+
+
+
+// 6. Write a Function to Capitalize the First Letter of Each Word in a Sentence
+
+function capitalizeWords(sentence){
+    let split = sentence.split(" ")
+
+    let frameSentence = ""
+
+    for(let i=0; i<split.length;i++){
+        let capitalSentence =  split[i][0].toUpperCase() + split[i].slice(1);
+        //   console.log(capitalSentence)
+        frameSentence += capitalSentence + " "
+    }
+    return frameSentence
+ 
+}
+
+ let resultCapitalizeWords = capitalizeWords("Function to Capitalize the First Letter of Each Word in a Sentence")
+console.log(resultCapitalizeWords)
+
+//  7. Use an IIFE to Print “Hello, JavaScript!”
+// (function (names) {
+//     console.log(`Hello ${names}`);
+// })("Javascript");
+
+// 8. Create a Simple Callback Function
+
+function greet(name, callback){
+    console.log(name);
+    callback()
+
+}
+greet("pavi",function callback(){
+    console.log("hellow")
+})
