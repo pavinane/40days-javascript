@@ -38,3 +38,5 @@ getResult(8, 5);
 
 
 ![Create the GEC and FEC with CP and EP flow](image.png)
+
+![Create the Stack and Heap Flow](image-1.png)
