@@ -35,7 +35,7 @@ TDZ();
 ``` js
 console.log(location) // not initialization because of reference error
 
-var location = "chennai
+var location = "chennai"
 
 
 foo()  // invoke the function will be hoisted
