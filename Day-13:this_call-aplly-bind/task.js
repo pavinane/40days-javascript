@@ -100,3 +100,32 @@ const users = {
 };
 
 users.greet();
+
+
+
+const car1 = {
+  brand: "Audi",
+  model: "A8",
+  describe: function () {
+    console.log(`This car is a ${this.brand} ${this.model}.`);
+  },
+};
+
+const car2 = {
+  brand: "BMW",
+  model: "X1",
+};
+
+
+// car2.describe = car1.describe
+
+// car2.describe()
+
+
+// car1.describe.call(car2)
+
+// const myCar = car1.describe
+
+// myCar.call(car2)
+
+// myCar.apply(car2)
