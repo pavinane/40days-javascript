@@ -141,7 +141,7 @@ let unit_cost = 150
 let discount = 20
 
 // monthly electric bill
-const monthElectric = units * unit_cost *30;
+const monthElectric = units * unit_cost * 30;
 
 // year electric bill
 const yearElectric = monthElectric *12

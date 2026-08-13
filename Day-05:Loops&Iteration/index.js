@@ -29,7 +29,7 @@ let repeat = ""
 
 // Nested Loop
 
-for(let i=0 ;i<language.length; i++){
+for(let i=0 ; i<language.length; i++){
     // console.log(language.charAt(i).toLocaleLowerCase()) 
 
     for(let j=i+1; j<language.length;j++){
