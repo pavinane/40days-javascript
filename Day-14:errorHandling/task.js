@@ -45,7 +45,7 @@ processPayment(10)
 
 const profile = {
     name: "a",
-    email: "ahbaj@",
+    email: "ahbaj",
     payment: 0,
 
 }
@@ -58,8 +58,9 @@ class UserValidation {
     }
 }
 
-function EmailValidation(message){
-    this.name ="Email Error";
+function EmailValidation(message) {
+
+    let name = "Email Error";
     this.message = message;
 }
 
