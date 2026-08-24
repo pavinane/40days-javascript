@@ -668,5 +668,4 @@ for( const values of arr1){
 
 console.log("mapping", forEachArr.map((val) => val)); //  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 console.log("complex mapping", forEachArr.map((val) =>[val])) //  [[1],[ 2,] [3], [4],[ 5], [6], [7], [8], [9], [10]]
-
 console.log("flat mapping", forEachArr.flatMap((val) =>[val])) //  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
